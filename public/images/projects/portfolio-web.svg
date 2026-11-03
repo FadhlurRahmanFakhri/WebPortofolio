@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="editorialBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F4F4F0"/>
+      <stop offset="100%" stop-color="#E8E8E2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#editorialBg)"/>
+
+  <!-- Editorial Grid & Typography Wireframe -->
+  <g transform="translate(60, 50)">
+    <rect width="680" height="400" rx="4" fill="#F8F8F6" stroke="#D5D5CF" stroke-width="1.5"/>
+
+    <!-- Grid Columns Guides -->
+    <line x1="170" y1="0" x2="170" y2="400" stroke="#E5E5E0" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="340" y1="0" x2="340" y2="400" stroke="#E5E5E0" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="510" y1="0" x2="510" y2="400" stroke="#E5E5E0" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Header bar -->
+    <text x="40" y="45" fill="#171717" font-family="sans-serif" font-size="16" font-weight="bold" letter-spacing="-0.5">M. FAKHRI</text>
+    <text x="40" y="65" fill="#777777" font-family="monospace" font-size="10">SOFTWARE ENGINEER &amp; 3D ARTIST</text>
+
+    <!-- Nav pills -->
+    <g transform="translate(420, 32)">
+      <text x="0" y="16" fill="#171717" font-family="sans-serif" font-size="12">Projects</text>
+      <text x="65" y="16" fill="#777777" font-family="sans-serif" font-size="12">About</text>
+      <text x="120" y="16" fill="#777777" font-family="sans-serif" font-size="12">Experience</text>
+      <text x="200" y="16" fill="#526B83" font-family="sans-serif" font-size="12" font-weight="bold">CV ↓</text>
+    </g>
+
+    <line x1="40" y1="85" x2="640" y2="85" stroke="#E5E5E0" stroke-width="1"/>
+
+    <!-- Hero Headline Representation -->
+    <text x="40" y="130" fill="#171717" font-family="sans-serif" font-size="28" font-weight="bold" letter-spacing="-1">Building digital experiences</text>
+    <text x="40" y="165" fill="#171717" font-family="sans-serif" font-size="28" font-weight="bold" letter-spacing="-1">through technology &amp; creativity.</text>
+    
+    <text x="40" y="200" fill="#777777" font-family="sans-serif" font-size="12">D4 Teknik Informatika — Politeknik Caltex Riau</text>
+
+    <!-- Project Card Grid Mockup -->
+    <g transform="translate(40, 230)">
+      <!-- Card 1 -->
+      <rect width="180" height="130" rx="2" fill="#FFFFFF" stroke="#E0E0DA" stroke-width="1"/>
+      <rect x="0" y="0" width="180" height="75" fill="#3D4D5C"/>
+      <text x="12" y="95" fill="#171717" font-family="sans-serif" font-size="10" font-weight="bold">3D IP Environment</text>
+      <text x="12" y="112" fill="#526B83" font-family="monospace" font-size="8">PT DEVATA STUDIO</text>
+
+      <!-- Card 2 -->
+      <rect x="210" y="0" width="180" height="130" rx="2" fill="#FFFFFF" stroke="#E0E0DA" stroke-width="1"/>
+      <rect x="210" y="0" width="180" height="75" fill="#1B2228"/>
+      <text x="222" y="95" fill="#171717" font-family="sans-serif" font-size="10" font-weight="bold">Hybrid CV &amp; CNN</text>
+      <text x="222" y="112" fill="#526B83" font-family="monospace" font-size="8">COMPUTER VISION</text>
+
+      <!-- Card 3 -->
+      <rect x="420" y="0" width="180" height="130" rx="2" fill="#FFFFFF" stroke="#E0E0DA" stroke-width="1"/>
+      <rect x="420" y="0" width="180" height="75" fill="#4A3B32"/>
+      <text x="432" y="95" fill="#171717" font-family="sans-serif" font-size="10" font-weight="bold">Rumah Gadang 3D</text>
+      <text x="432" y="112" fill="#526B83" font-family="monospace" font-size="8">HERITAGE PRESERVATION</text>
+    </g>
+  </g>
+</svg>

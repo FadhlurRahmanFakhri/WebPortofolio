@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="animBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181B1F"/>
+      <stop offset="100%" stop-color="#242B32"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#animBg)"/>
+
+  <!-- Top Timeline Header Bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#111316"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#313942" stroke-width="1"/>
+  <text x="30" y="25" fill="#8796A6" font-family="monospace" font-size="11">TIMELINE :: FRAME 048 / 240 [24.00 FPS]</text>
+
+  <!-- Keyframe diamond marks on timeline -->
+  <g transform="translate(380, 20)">
+    <polygon points="0,-6 6,0 0,6 -6,0" fill="#E69542"/>
+    <polygon points="40,-6 46,0 40,6 34,0" fill="#E69542"/>
+    <polygon points="90,-6 96,0 90,6 84,0" fill="#E69542"/>
+    <polygon points="140,-6 146,0 140,6 134,0" fill="#526B83"/>
+    <polygon points="180,-6 186,0 180,6 174,0" fill="#E69542"/>
+  </g>
+
+  <!-- Character Rig Wireframe / Armature Bones -->
+  <g transform="translate(240, 70)">
+    <!-- Head Root & Shape -->
+    <circle cx="160" cy="70" r="32" fill="none" stroke="#6887A6" stroke-width="2"/>
+    <!-- Head Bone Octahedron -->
+    <polygon points="160,45 168,75 160,95 152,75" fill="#526B83" fill-opacity="0.3" stroke="#6887A6" stroke-width="1.5"/>
+
+    <!-- Spine / Chest Bones -->
+    <circle cx="160" cy="110" r="4" fill="#E69542"/>
+    <polygon points="160,110 172,150 160,185 148,150" fill="#526B83" fill-opacity="0.3" stroke="#6887A6" stroke-width="1.5"/>
+    <circle cx="160" cy="185" r="5" fill="#E69542"/>
+    <polygon points="160,185 174,215 160,240 146,215" fill="#526B83" fill-opacity="0.3" stroke="#6887A6" stroke-width="1.5"/>
+    <circle cx="160" cy="240" r="6" fill="#E69542"/>
+
+    <!-- Left Arm -->
+    <line x1="160" y1="130" x2="90" y2="160" stroke="#6887A6" stroke-width="2"/>
+    <circle cx="90" cy="160" r="4" fill="#E69542"/>
+    <line x1="90" y1="160" x2="60" y2="225" stroke="#6887A6" stroke-width="2"/>
+    <circle cx="60" cy="225" r="4" fill="#2A9D8F"/>
+    <!-- Hand Controller Widget -->
+    <rect x="45" y="220" width="30" height="15" rx="3" fill="none" stroke="#2A9D8F" stroke-width="1.5"/>
+
+    <!-- Right Arm (Gesturing up) -->
+    <line x1="160" y1="130" x2="230" y2="150" stroke="#6887A6" stroke-width="2"/>
+    <circle cx="230" cy="150" r="4" fill="#E69542"/>
+    <line x1="230" y1="150" x2="265" y2="105" stroke="#6887A6" stroke-width="2"/>
+    <circle cx="265" cy="105" r="4" fill="#2A9D8F"/>
+    <!-- Hand Controller Widget -->
+    <circle cx="265" cy="105" r="14" fill="none" stroke="#2A9D8F" stroke-width="1.5"/>
+
+    <!-- Left Leg -->
+    <line x1="145" y1="240" x2="130" y2="310" stroke="#6887A6" stroke-width="2.5"/>
+    <circle cx="130" cy="310" r="4" fill="#E69542"/>
+    <line x1="130" y1="310" x2="120" y2="380" stroke="#6887A6" stroke-width="2.5"/>
+    <circle cx="120" cy="380" r="5" fill="#2A9D8F"/>
+    <!-- Foot Controller -->
+    <path d="M 100 395 L 145 395 L 140 380 L 100 380 Z" fill="none" stroke="#2A9D8F" stroke-width="2"/>
+
+    <!-- Right Leg -->
+    <line x1="175" y1="240" x2="195" y2="305" stroke="#6887A6" stroke-width="2.5"/>
+    <circle cx="195" cy="305" r="4" fill="#E69542"/>
+    <line x1="195" y1="305" x2="210" y2="380" stroke="#6887A6" stroke-width="2.5"/>
+    <circle cx="210" cy="380" r="5" fill="#2A9D8F"/>
+    <!-- Foot Controller -->
+    <path d="M 195 395 L 240 395 L 235 380 L 195 380 Z" fill="none" stroke="#2A9D8F" stroke-width="2"/>
+
+    <!-- Motion Curve Trails -->
+    <path d="M 230 150 Q 255 120 265 105" fill="none" stroke="#E69542" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- Left Side: Graph Editor / Bezier Curves -->
+  <g transform="translate(30, 80)">
+    <rect width="210" height="230" rx="4" fill="#111417" stroke="#313942" stroke-width="1"/>
+    <text x="14" y="24" fill="#8E9DAE" font-family="monospace" font-size="10">GRAPH EDITOR</text>
+    
+    <!-- Bezier Curve 1 (Location.Z) -->
+    <path d="M 20 180 C 60 180 90 90 140 100 C 170 110 185 70 200 65" fill="none" stroke="#E63946" stroke-width="2"/>
+    <!-- Bezier Curve 2 (Rotation.X) -->
+    <path d="M 20 120 C 70 140 110 190 150 170 C 180 155 190 130 200 125" fill="none" stroke="#2A9D8F" stroke-width="2"/>
+    <!-- Handles -->
+    <circle cx="90" cy="115" r="3" fill="#E63946"/>
+    <line x1="90" y1="115" x2="110" y2="105" stroke="#E63946" stroke-width="1"/>
+    <circle cx="110" cy="105" r="3" fill="#FFFFFF"/>
+    
+    <!-- Curve Legend -->
+    <text x="14" y="215" fill="#E63946" font-family="monospace" font-size="9">Loc Z [Spine]</text>
+    <text x="110" y="215" fill="#2A9D8F" font-family="monospace" font-size="9">Rot X [Pelvis]</text>
+  </g>
+
+  <!-- Bottom Details & Badge -->
+  <g transform="translate(540, 390)">
+    <rect width="220" height="65" rx="4" fill="#111417" stroke="#313942" stroke-width="1"/>
+    <text x="16" y="26" fill="#F8F8F6" font-family="sans-serif" font-size="12" font-weight="600">CHARACTER RIG &amp; ANIMATION</text>
+    <text x="16" y="46" fill="#8796A6" font-family="monospace" font-size="10">IK/FK • WEIGHT PAINT • BLENDER</text>
+  </g>
+</svg>

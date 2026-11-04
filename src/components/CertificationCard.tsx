@@ -72,3 +72,4 @@ export function CertificationCard({ certification }: CertificationCardProps) {
     </div>
   );
 }
+

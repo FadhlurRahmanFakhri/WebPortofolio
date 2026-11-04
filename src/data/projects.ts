@@ -1,3 +1,12 @@
+export interface Model3DConfig {
+  modelUrl: string;
+  sourceFile: string;
+  objFile?: string;
+  format: "glb" | "obj" | "blend";
+  scale?: number;
+  title?: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -12,6 +21,7 @@ export interface Project {
   tools: string[];
   featured: boolean;
   thumbnail: string;
+  model3d?: Model3DConfig;
   clientOrOrg?: string;
   role: string;
   overview: string;
@@ -60,6 +70,14 @@ export const projectsData: Project[] = [
     tools: ["Blender", "Cycles", "Substance Painter", "Photoshop", "PBR Workflow"],
     featured: true,
     thumbnail: "/images/projects/uda-ijal-env.svg",
+    model3d: {
+      modelUrl: "/models/isometricRoom.glb",
+      sourceFile: "src/data/obj/isometricRoom.blend",
+      objFile: "src/data/obj/isometricRoom.obj",
+      format: "glb",
+      scale: 0.9,
+      title: "3D Isometric Environment Room",
+    },
     clientOrOrg: "PT Devata Studio Kreatif",
     role: "Environment 3D Modeler & Concept Artist",
     overview:
@@ -222,6 +240,14 @@ export const projectsData: Project[] = [
     tools: ["Blender", "Rigify", "Weight Painting", "Action Editor", "Premiere Pro"],
     featured: true,
     thumbnail: "/images/projects/uda-ijal-anim.svg",
+    model3d: {
+      modelUrl: "/models/eps1.glb",
+      sourceFile: "src/data/obj/eps1.blend",
+      objFile: "src/data/obj/eps1.obj",
+      format: "glb",
+      scale: 0.8,
+      title: "Episode 1 Animated 3D Set",
+    },
     clientOrOrg: "PT Devata Studio Kreatif",
     role: "3D Animator & Technical Rigging Artist",
     overview:
@@ -631,6 +657,70 @@ export const projectsData: Project[] = [
         type: "render",
         caption: "Warm lantern lights reflecting against calm ocean tides under deep indigo twilight skies.",
         colorAccent: "#526B83",
+      },
+    ],
+  },
+  {
+    slug: "stylized-3d-prop-apple-study",
+    title: "Stylized Organic Prop & Material Study",
+    category: "3D Modeling",
+    shortDescription:
+      "Sculpted stylized organic 3D prop study created in Blender 5.0 with custom procedural shader nodes, subsurface scattering, and PBR texturing.",
+    year: "2024",
+    tools: ["Blender 5.0", "Cycles", "Substance Painter", "Shader Nodes", "glTF / R3F"],
+    featured: true,
+    thumbnail: "/images/projects/concept-archipelago.svg",
+    model3d: {
+      modelUrl: "/models/apple.glb",
+      sourceFile: "src/data/obj/apple.blend",
+      objFile: "src/data/obj/apple.obj",
+      format: "glb",
+      scale: 1.2,
+      title: "Stylized 3D Prop (Blender)",
+    },
+    clientOrOrg: "3D Asset Study & Exploration",
+    role: "3D Prop & Shading Artist",
+    overview:
+      "An in-depth 3D asset modeling and shading exploration focusing on organic silhouette form, subtle curvature, stem/leaf deformation, and multi-layer procedural material texturing in Blender.",
+    background:
+      "Creating convincing stylized organic props requires balancing clean topology with nuanced surface roughness variations, subtle vertex painting, and realistic light transmission. This study showcases production asset quality for animation and real-time WebGL rendering.",
+    objectives: [
+      "Master organic subdivision surface modeling with quad-dominant edge loops.",
+      "Develop procedural shader graphs with layered roughness, micro-bump, and color gradients.",
+      "Export optimized real-time web-compatible glTF / OBJ geometry with embedded PBR materials.",
+    ],
+    contributions: [
+      "Sculpted and modeled organic form with custom stem and leaf topology in Blender.",
+      "Configured multi-layered procedural shader graph with gradient ramp mapping and clearcoat reflection.",
+      "Optimized mesh geometry for real-time 60 FPS viewport scrubbing and WebGL rendering in React Three Fiber.",
+    ],
+    developmentProcess: [
+      {
+        phase: "Phase 1: Silhouette Blocking",
+        description: "Established organic proportions and leaf curvature using proportional editing and curve deformers.",
+      },
+      {
+        phase: "Phase 2: Shader Node Crafting",
+        description: "Built custom PBR procedural textures combining Voronoi noise with ColorRamp gradient maps.",
+      },
+      {
+        phase: "Phase 3: Real-Time Optimization",
+        description: "Optimized draw calls, vertex count, and exported to glTF / GLB for interactive WebGL inspection.",
+      },
+    ],
+    results: [
+      "Achieved sub-2MB compact glTF binary with preserved procedural PBR materials.",
+      "Interactive 3D model viewable with 60 FPS orbit controls in React Three Fiber.",
+    ],
+    links: {
+      artstation: "https://artstation.com/fakhri3d",
+    },
+    visualHighlights: [
+      {
+        title: "Subdivision Topology Inspection",
+        type: "render",
+        caption: "Smooth quad mesh with natural organic deformation contours.",
+        colorAccent: "#E63946",
       },
     ],
   },

@@ -81,3 +81,4 @@ export function SkillGroup({ group }: SkillGroupProps) {
     </div>
   );
 }
+

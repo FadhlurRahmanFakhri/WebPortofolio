@@ -51,3 +51,4 @@ export const profileData = {
   careerObjectives:
     "Seeking opportunities as a Software Engineer, Computer Vision Engineer, or 3D Technical Artist where I can apply robust computational problem-solving and creative spatial visualization to build impactful products.",
 };
+

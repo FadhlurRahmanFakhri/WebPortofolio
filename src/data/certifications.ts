@@ -102,3 +102,4 @@ export const certificationsData: Certification[] = [
       "Validated comprehension of ethical hacking practices, legal compliance frameworks, reconnaissance tools, and foundational vulnerability remediation.",
   },
 ];
+

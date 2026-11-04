@@ -260,3 +260,4 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
     </div>
   );
 }
+

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { projectsData, Project } from "@/data/projects";
 import { GithubIcon } from "@/components/SocialIcons";
+import { ProjectDetailMedia } from "@/components/ProjectDetailMedia";
 
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -163,16 +164,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </div>
       </header>
 
-      {/* Hero Visual Thumbnail Banner */}
-      <div className="relative aspect-16/10 w-full rounded-2xl overflow-hidden border border-portfolio-border dark:border-portfolio-darkBorder bg-portfolio-tagBg dark:bg-portfolio-darkTagBg">
-        <Image
-          src={project.thumbnail}
-          alt={project.title}
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+      {/* Hero Visual / Interactive 3D Viewport Banner */}
+      <ProjectDetailMedia project={project} />
 
       {/* Structured Case Study Sections */}
       <div className="space-y-12">

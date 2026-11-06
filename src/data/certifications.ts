@@ -126,7 +126,7 @@ export const certificationsData: Certification[] = [
       "Certification validating proficiency in MikroTik RouterOS and RouterBOARD hardware for enterprise networking, routing protocols, firewall rules, and traffic management.",
   },
   {
-    id: "national-webinar-cybersecurity-tech",
+    id: "animation-webinar-devata-2025",
     title: "Animation Webinar – Certificate of Participation",
     issuer: "Devata Studio",
     issuerBadge: "Seminar & Training",
@@ -144,7 +144,7 @@ export const certificationsData: Certification[] = [
   },
 
   {
-    id: "national-webinar-cybersecurity-tech",
+    id: "animation-webinar-devata-2024",
     title: "Animation Webinar – Certificate of Participation",
     issuer: "Devata Studio",
     issuerBadge: "Seminar & Training",
@@ -162,7 +162,7 @@ export const certificationsData: Certification[] = [
   },
 
   {
-    id: "national-webinar-cybersecurity-tech",
+    id: "mtq-national-polytechnic-2024",
     title: "National Polytechnic MTQ – University Representative",
     issuer: "Pangkajene Kepulauan State Polytechnic Of Agriculture",
     issuerBadge: "Participate",
@@ -180,7 +180,7 @@ export const certificationsData: Certification[] = [
   },
 
   {
-    id: "national-webinar-cybersecurity-tech",
+    id: "mtq-unilak-2025",
     title: "MTQ Certificate for University Students",
     issuer: "Lancang Kuning University",
     issuerBadge: "Participate",
@@ -198,7 +198,7 @@ export const certificationsData: Certification[] = [
   },
 
   {
-    id: "national-webinar-cybersecurity-tech",
+    id: "toeic-prediction-test",
     title: "TOEIC Prediction Test",
     issuer: "Language Training Institution",
     issuerBadge: "Certificate of Achievement",

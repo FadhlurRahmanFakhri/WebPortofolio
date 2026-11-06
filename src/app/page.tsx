@@ -46,7 +46,7 @@ export default function HomePage() {
 
               {/* Headline */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-portfolio-text dark:text-portfolio-darkText leading-[1.12]">
-                Building digitalll experiences through{" "}
+                Building digital experiences through{" "}
                 <span className="text-portfolio-accent">technology</span> and{" "}
                 <span className="italic font-serif font-normal">creativity</span>.
               </h1>

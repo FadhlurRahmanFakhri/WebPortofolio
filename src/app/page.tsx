@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Download,
@@ -21,6 +22,7 @@ import { certificationsData } from "@/data/certifications";
 import { ProjectCard } from "@/components/ProjectCard";
 import { CopyEmailButton } from "@/components/CopyEmailButton";
 import { CVModal } from "@/components/CVModal";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 export default function HomePage() {
   const [cvModalOpen, setCvModalOpen] = useState(false);
@@ -31,77 +33,110 @@ export default function HomePage() {
       {/* 1. EDITORIAL HERO SECTION */}
       <section className="pt-12 sm:pt-20 md:pt-24 border-b border-portfolio-border dark:border-portfolio-darkBorder pb-16 sm:pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl space-y-6">
-            {/* Status & University Metadata Header */}
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-portfolio-accentLight dark:bg-portfolio-accent/20 text-portfolio-accent border border-portfolio-accent/20">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Available for Software Engineering &amp; 3D Opportunities
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-mono text-portfolio-muted dark:text-portfolio-darkMuted">
-                <GraduationCap className="w-3.5 h-3.5 text-portfolio-accent" />
-                D4 Teknik Informatika — Politeknik Caltex Riau
-              </span>
-            </div>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-14">
+            {/* Div 1: Informasi Hero, Headline, CTA, & Stats */}
+            <div className="flex-1 max-w-3xl space-y-6">
+              {/* Status & University Metadata Header */}
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-portfolio-muted dark:text-portfolio-darkMuted">
+                  <GraduationCap className="w-3.5 h-3.5 text-portfolio-accent" />
+                  D4 Teknik Informatika — Politeknik Caltex Riau
+                </span>
+              </div>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-portfolio-text dark:text-portfolio-darkText leading-[1.12]">
-              Building digital experiences through{" "}
-              <span className="text-portfolio-accent">technology</span> and{" "}
-              <span className="italic font-serif font-normal">creativity</span>.
-            </h1>
+              {/* Headline */}
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-portfolio-text dark:text-portfolio-darkText leading-[1.12]">
+                Building digital experiences through{" "}
+                <span className="text-portfolio-accent">technology</span> and{" "}
+                <span className="italic font-serif font-normal">creativity</span>.
+              </h1>
 
-            {/* Subheadline */}
-            <p className="text-base sm:text-lg text-portfolio-muted dark:text-portfolio-darkMuted leading-relaxed max-w-2xl">
-              {profileData.subheadline}
-            </p>
+              {/* Subheadline */}
+              <p className="text-base sm:text-lg text-portfolio-muted dark:text-portfolio-darkMuted leading-relaxed max-w-2xl">
+                {profileData.subheadline}
+              </p>
 
-            {/* CTAs */}
-            <div className="pt-4 flex flex-wrap items-center gap-3">
-              <Link
-                href="/projects"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-portfolio-text text-portfolio-bg hover:bg-black dark:bg-portfolio-darkText dark:text-portfolio-darkBg dark:hover:bg-white transition-all shadow-xs"
-              >
-                <span>View Projects</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              {/* CTAs */}
+              <div className="pt-4 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-portfolio-text text-portfolio-bg hover:bg-black dark:bg-portfolio-darkText dark:text-portfolio-darkBg dark:hover:bg-white transition-all shadow-xs"
+                >
+                  <span>View Projects</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
 
-              <button
-                onClick={() => setCvModalOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-mono font-medium bg-white dark:bg-portfolio-darkCard text-portfolio-text dark:text-portfolio-darkText border border-portfolio-border dark:border-portfolio-darkBorder hover:border-portfolio-accent transition-colors shadow-2xs cursor-pointer"
-              >
-                <Download className="w-4 h-4 text-portfolio-accent" />
-                <span>Download CV</span>
-              </button>
+                <button
+                  onClick={() => setCvModalOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-mono font-medium bg-white dark:bg-portfolio-darkCard text-portfolio-text dark:text-portfolio-darkText border border-portfolio-border dark:border-portfolio-darkBorder hover:border-portfolio-accent transition-colors shadow-2xs cursor-pointer"
+                >
+                  <Download className="w-4 h-4 text-portfolio-accent" />
+                  <span>Download CV</span>
+                </button>
 
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-portfolio-muted dark:text-portfolio-darkMuted hover:text-portfolio-text dark:hover:text-portfolio-darkText hover:bg-portfolio-tagBg dark:hover:bg-portfolio-darkTagBg transition-colors"
-              >
-                <span>Get in Touch</span>
-              </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-portfolio-muted dark:text-portfolio-darkMuted hover:text-portfolio-text dark:hover:text-portfolio-darkText hover:bg-portfolio-tagBg dark:hover:bg-portfolio-darkTagBg transition-colors"
+                >
+                  <span>Get in Touch</span>
+                </Link>
 
-              <div className="hidden sm:inline-block">
-                <CopyEmailButton variant="subtle" label="Copy Email" />
+                <div className="hidden sm:inline-block">
+                  <CopyEmailButton variant="subtle" label="Copy Email" />
+                </div>
+              </div>
+
+              {/* Quick Metrics Strip */}
+              <div className="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 border-t border-portfolio-border/70 dark:border-portfolio-darkBorder/70">
+                {profileData.stats.map((stat, i) => (
+                  <div key={i} className="space-y-0.5">
+                    <p className="text-xl sm:text-2xl font-bold font-mono text-portfolio-text dark:text-portfolio-darkText">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-portfolio-muted dark:text-portfolio-darkMuted">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Quick Metrics Strip */}
-            <div className="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 border-t border-portfolio-border/70 dark:border-portfolio-darkBorder/70">
-              {profileData.stats.map((stat, i) => (
-                <div key={i} className="space-y-0.5">
-                  <p className="text-xl sm:text-2xl font-bold font-mono text-portfolio-text dark:text-portfolio-darkText">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs text-portfolio-muted dark:text-portfolio-darkMuted">
-                    {stat.label}
-                  </p>
+            {/* Div 2: Image Profile dan Nama (Sejajar dengan Div Pertama) */}
+            <div className="w-full sm:w-80 lg:w-88 flex flex-col items-center p-5 sm:p-6 rounded-2xl bg-white dark:bg-portfolio-darkCard border border-portfolio-border dark:border-portfolio-darkBorder shadow-xs hover:border-portfolio-accent/60 transition-all duration-300">
+              <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden border border-portfolio-border dark:border-portfolio-darkBorder bg-portfolio-tagBg dark:bg-portfolio-darkTagBg shadow-inner group">
+                <Image
+                  src="/images/profile-photo.jpg"
+                  alt={profileData.fullName}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 350px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-103"
+                />
+              </div>
+
+              <div className="mt-4 text-center space-y-1">
+                <h2 className="text-lg sm:text-xl font-bold tracking-tight text-portfolio-text dark:text-portfolio-darkText">
+                  {profileData.fullName}
+                </h2>
+                <p className="text-xs sm:text-sm font-mono text-portfolio-accent font-medium">
+                  {profileData.title}
+                </p>
+                <div className="pt-2 flex items-center justify-center gap-1.5 text-[11px] font-mono text-portfolio-muted dark:text-portfolio-darkMuted">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>Available for Opportunities</span>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* FEATURED VIDEO PLAYER (Above Section 2, Below Section 1) */}
+      <VideoPlayer
+        url="https://youtu.be/09vpbyDk_NI"
+        title="Featured Motion & 3D Showcase"
+        subtitle="YouTube Showcase • Autoplay Ready"
+      />
 
       {/* 2. DUAL-DISCIPLINE SPECIALIZATION HIGHLIGHT */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,10 +162,10 @@ export default function HomePage() {
               Software Engineering &amp; Computer Vision
             </h3>
             <p className="text-sm text-portfolio-muted dark:text-portfolio-darkMuted leading-relaxed">
-              Applying mathematical algorithms to visual streams. From training convolutional neural networks (CNNs) and implementing low-latency Haar Cascade classifiers to building responsive full-stack applications in TypeScript and Next.js.
+              Applying mathematical algorithms, deep learning models, and geospatial data processing to visual streams and enterprise web systems. Experienced in training Convolutional Neural Networks (CNNs), deploying low-latency Haar Cascade classifiers, integrating Web GIS mapping libraries, and architecting responsive full-stack applications.
             </p>
             <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              {["Python", "OpenCV", "CNN", "Haar Cascade", "Next.js", "TypeScript", "PostgreSQL"].map((item) => (
+              {["Python", "OpenCV", "CNN", "Haar Cascade", "OpenLayers", "Next.js", "TensorFlow.js", "ArcGIS & Web GIS"].map((item) => (
                 <span
                   key={item}
                   className="px-2 py-0.5 rounded bg-portfolio-tagBg dark:bg-portfolio-darkTagBg text-portfolio-text/80 dark:text-portfolio-darkText/80 text-[11px]"
@@ -153,7 +188,7 @@ export default function HomePage() {
               Hands-on studio production experience with PT Devata Studio Kreatif. Crafting modular 3D environments, character rigs, and animation sequences for the original IP &apos;Uda Ijal &amp; Amaik&apos; using Blender and Substance Painter.
             </p>
             <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              {["Blender 4.x", "Environment Modeling", "Character Rigging", "3D Animation", "Cycles", "PBR Shading"].map((item) => (
+              {["Blender", "Environment Modeling", "Character Rigging", "3D Animation", "Cycles", "PBR Shading", "Image Texture", "UV Mapping"].map((item) => (
                 <span
                   key={item}
                   className="px-2 py-0.5 rounded bg-portfolio-tagBg dark:bg-portfolio-darkTagBg text-portfolio-text/80 dark:text-portfolio-darkText/80 text-[11px]"
@@ -188,7 +223,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProjects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} priority={i === 0} />
+            <ProjectCard key={`${project.slug}-${i}`} project={project} priority={i === 0} />
           ))}
         </div>
       </section>
@@ -300,22 +335,37 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificationsData.slice(0, 3).map((cert) => (
             <div
               key={cert.id}
-              className="p-5 rounded-xl bg-white dark:bg-portfolio-darkCard border border-portfolio-border dark:border-portfolio-darkBorder space-y-2 hover:border-portfolio-accent/60 transition-colors"
+              className="group rounded-xl bg-white dark:bg-portfolio-darkCard border border-portfolio-border dark:border-portfolio-darkBorder overflow-hidden hover:border-portfolio-accent/60 transition-all shadow-2xs hover:shadow-xs flex flex-col"
             >
-              <div className="flex items-center justify-between text-xs font-mono text-portfolio-muted dark:text-portfolio-darkMuted">
-                <span>{cert.issuerBadge}</span>
-                <span>{cert.issueDate}</span>
+              {cert.image && (
+                <div className="relative aspect-[16/10] w-full bg-[#121519] border-b border-portfolio-border/70 dark:border-portfolio-darkBorder/70">
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 350px"
+                    className="object-contain p-2"
+                  />
+                </div>
+              )}
+              <div className="p-5 flex-1 flex flex-col justify-between gap-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs font-mono text-portfolio-muted dark:text-portfolio-darkMuted">
+                    <span className="font-semibold text-portfolio-accent">{cert.issuerBadge}</span>
+                    <span>{cert.issueDate}</span>
+                  </div>
+                  <h3 className="font-bold text-sm text-portfolio-text dark:text-portfolio-darkText">
+                    {cert.title}
+                  </h3>
+                  <p className="text-xs text-portfolio-muted dark:text-portfolio-darkMuted line-clamp-2">
+                    {cert.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-bold text-sm text-portfolio-text dark:text-portfolio-darkText">
-                {cert.title}
-              </h3>
-              <p className="text-xs text-portfolio-muted dark:text-portfolio-darkMuted line-clamp-2">
-                {cert.description}
-              </p>
             </div>
           ))}
         </div>

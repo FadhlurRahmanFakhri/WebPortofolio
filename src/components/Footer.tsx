@@ -166,7 +166,7 @@ export function Footer() {
                 aria-label="ArtStation portfolio"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
-                <span>ArtStation</span>
+                <span>Instagram</span>
                 <ArrowUpRight className="w-3 h-3 text-portfolio-muted" />
               </a>
               <a

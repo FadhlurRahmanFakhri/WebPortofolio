@@ -78,6 +78,14 @@ export const skillGroups: SkillCategoryGroup[] = [
           "Object-oriented programming, data structures, algorithm design, version control, and clean code principles.",
         keywords: ["OOP", "Data Structures", "Git", "Clean Code"],
       },
+      {
+        name: "ArcGIS & Web GIS",
+        category: "Software Engineering & IT",
+        level: "Advanced",
+        description:
+          "Spatial data processing, geographical feature layering, and integrating geospatial services with interactive web mapping libraries like OpenLayers.",
+        keywords: ["ArcGIS", "OpenLayers", "Spatial Data", "GeoJSON", "Map Layering"],
+      }
     ],
   },
   {
@@ -139,7 +147,7 @@ export const skillGroups: SkillCategoryGroup[] = [
       {
         name: "Environment Modeling",
         category: "3D & Digital Creative",
-        level: "Advanced",
+        level: "Proficient",
         description:
           "Designing modular architectural structures, stylized organic props, terrain blocking, and immersive worldbuilding sets.",
         keywords: ["Modular Assets", "Architectural Sets", "Set Dressing", "Foliage"],
@@ -147,7 +155,7 @@ export const skillGroups: SkillCategoryGroup[] = [
       {
         name: "3D Animation",
         category: "3D & Digital Creative",
-        level: "Proficient",
+        level: "Advanced",
         description:
           "Keyframe animation principles, anticipation, timing, easing, walk/run cycles, lip-sync phonemes, and expressive acting sequences.",
         keywords: ["Action Editor", "Graph Curves", "Timing & Spacing", "Keyframing"],
@@ -163,7 +171,7 @@ export const skillGroups: SkillCategoryGroup[] = [
       {
         name: "Prop Modeling & Asset Optimization",
         category: "3D & Digital Creative",
-        level: "Advanced",
+        level: "Proficient",
         description:
           "Creating game- and animation-ready hard surface props with strict poly budgets, clean baking normals, and efficient LODs.",
         keywords: ["Clean Topology", "Normal Baking", "UV Layout", "Asset Optimization"],

@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact — Let's Connect & Collaborate",
   description:
-    "Get in touch with M. Fakhri for software engineering roles, computer vision projects, 3D modeling commissions, or general inquiries.",
+    "Get in touch with Fadhlur Rahman Fakhri for software engineering roles, computer vision projects, 3D modeling commissions, or general inquiries.",
 };
 
 export default function ContactPage() {

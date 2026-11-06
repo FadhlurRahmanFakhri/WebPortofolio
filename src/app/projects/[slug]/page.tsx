@@ -45,7 +45,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.title} | M. Fakhri Portfolio`,
       description: project.shortDescription,
-      images: [{ url: project.thumbnail }],
+      images: [{ url: project.thumbnail || "/images/profile-portrait.svg" }],
     },
   };
 }

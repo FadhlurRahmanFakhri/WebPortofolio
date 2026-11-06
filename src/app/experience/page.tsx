@@ -5,7 +5,7 @@ import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 export const metadata: Metadata = {
   title: "Experience — PT Devata Studio & Campus Leadership",
   description:
-    "Professional 3D studio experience at PT Devata Studio Kreatif for the original IP 'Uda Ijal & Amaik' and university leadership roles.",
+    "Professional 3D studio experience at PT. Devata Studio Kreatif for the original IP 'Uda Ijal & Amaik' and university leadership roles.",
 };
 
 export default function ExperiencePage() {

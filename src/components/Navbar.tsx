@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Sun, Moon, Menu, X, Download, ArrowUpRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
@@ -37,21 +38,26 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="group flex flex-col focus:outline-hidden"
+              className="group flex items-center gap-2 focus:outline-hidden"
               aria-label="Home page"
             >
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-base sm:text-lg tracking-tight text-portfolio-text dark:text-portfolio-darkText">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+                <Image
+                  src="/images/logo.jpg"
+                  alt={profileData.name}
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
+              <div className="hidden sm:flex flex-col">
+                <span className="font-bold text-sm tracking-tight text-portfolio-text dark:text-portfolio-darkText">
                   {profileData.name}
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  Available
+                <span className="text-[11px] text-portfolio-muted dark:text-portfolio-darkMuted font-mono">
+                  Software Engineering • 3D Creative
                 </span>
               </div>
-              <span className="text-[11px] text-portfolio-muted dark:text-portfolio-darkMuted font-mono hidden sm:inline-block">
-                Software Engineering • 3D Creative
-              </span>
             </Link>
           </div>
 

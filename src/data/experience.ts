@@ -14,10 +14,10 @@ export interface ExperienceItem {
 export const professionalExperience: ExperienceItem[] = [
   {
     id: "devata-studio",
-    role: "3D Artist & Environment Modeler",
-    organization: "PT Devata Studio Kreatif",
+    role: "3D Generalist",
+    organization: "PT. Devata Studio Kreatif",
     location: "Indonesia",
-    period: "2023 — 2024",
+    period: "August 2025 — December 2025",
     type: "Professional",
     highlight: "Core 3D Production for New Original IP 'Uda Ijal & Amaik'",
     description:
@@ -39,7 +39,10 @@ export const professionalExperience: ExperienceItem[] = [
       "Concept Art",
       "Photoshop",
       "Rigging",
-    ],
+      "Lighting",
+      "Compositing",
+      "Rendering",
+    ]
   },
 ];
 
